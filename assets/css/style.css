@@ -6,8 +6,6 @@
 
 body {
     font-family: Arial, sans-serif; /* Fuente por defecto */
-    line-height: 1.6; /* Espaciado de línea */
-    color: #333; /* Color de texto */
     background-color: #fffafa; /* Color de fondo */
 }
 
@@ -17,7 +15,7 @@ body {
     "header header"
     "menu main"
     "footer footer";
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 4fr;
     gap: 10px;
 
     }
@@ -27,21 +25,23 @@ header{
     background-color: #050910;
     color: #ea507c;
     text-align: center;
-    padding: 8px;
+    padding: 1rem;
 }
 
 menu{
     grid-area: menu;
+    padding: 15px;
 }
 
 menu p{
-    font-size: 10px;
+    
     color:#828181;
 }
 
 main{
     grid-area: main;
-    min-height: 80vh;
+    min-height: 85vh;
+    box-sizing: border-box;
 }
 
 footer{
@@ -51,13 +51,36 @@ footer{
 
 .cards{
     display: flex;
+    flex-wrap: wrap;
     }
-    .card {
+
+.card {
     display: flex;
-    flex-direction: column; width: 10em;
-    border: solid 1px; margin: 5px; padding: 5px;
+    flex-direction: column; 
+    width: 250px;
+    border: solid 1px; 
+    margin: 5px; 
+    
     }
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+    
+}
 
 .card-body {
     flex-grow: 1;
+    text-align: center ;
+    padding: 0.5rem;
+
     }
+
+.card-footer{
+    background-color: #5a25f8;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+}
