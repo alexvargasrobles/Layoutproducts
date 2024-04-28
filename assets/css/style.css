@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Fuente por defecto */
-    background-color: #fffafa; /* Color de fondo */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
 .grid-container{
@@ -15,53 +15,58 @@ body {
     "header header"
     "menu main"
     "footer footer";
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 15% 3fr;
     gap: 10px;
-
     }
 
 header{
     grid-area: header;
-    background-color: #050910;
-    color: #ea507c;
-    text-align: center;
+    background-color: #000000;
+    color: #db7438;
+    text-align: left;
     padding: 1rem;
 }
 
 menu{
     grid-area: menu;
+    display: flex;
+    flex-direction: column;
     padding: 15px;
+    margin-left: 10px;
 }
 
 menu p{
-    
     color:#828181;
+    margin: 5px;
 }
 
 main{
     grid-area: main;
-    min-height: 85vh;
-    box-sizing: border-box;
+    min-height: 70vh;
 }
 
 footer{
     grid-area: footer;
-    background-color: #66f;
+    background-color: #000;
+    color: #db7438;
+    text-align: center;
+    padding: 1rem;
 }
 
 .cards{
     display: flex;
     flex-wrap: wrap;
+    padding: 2rem;
+    gap: 3rem;
     }
 
 .card {
     display: flex;
     flex-direction: column; 
     width: 250px;
-    border: solid 1px; 
+    border: solid 2px; 
     margin: 5px; 
-    
-    }
+        }
 
 .card img{
     width: 100%;
@@ -79,8 +84,14 @@ footer{
     }
 
 .card-footer{
-    background-color: #5a25f8;
+    background-color: #353536;
     color: #fff;
     text-align: center;
     padding: 0.5rem;
+
+}
+
+.card-footer:hover {
+    color:#fa6f2f;
+    cursor: pointer;
 }
